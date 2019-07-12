@@ -1,0 +1,24 @@
+[HealthCheck]
+  Enable = false
+  Host = "localhost"
+  Port = "1111"
+
+[Gops]
+  Enable = true
+
+[Logger]
+  Development = false
+  Level = "info"
+  Encoding = "json"
+  OutputPaths = ["stdout"]
+  AppErrorOutputPaths = ["stderr"]
+  ErrorOutputPaths = ["stderr"]
+  [Logger.EncoderConfig]
+    MessageKey = "msg"
+    LevelKey = "lvl"
+    TimeKey = "ts"
+    NameKey = "name"
+    CallerKey = "caller"
+    StacktraceKey = "stacktrace"
+    LevelEncoder = ""
+    CallerEncoder = "short"
