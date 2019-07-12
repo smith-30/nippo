@@ -18,7 +18,7 @@ RESET=\033[0m
 COLORIZE_PASS=sed ''/PASS/s//$$(printf "$(GREEN)PASS$(RESET)")/''
 COLORIZE_FAIL=sed ''/FAIL/s//$$(printf "$(RED)FAIL$(RESET)")/''
 
-NAME=ootd
+NAME=nippo
 
 .PHONY: \
 	runner-test \
@@ -37,7 +37,7 @@ clean-dep:
 	GO111MODULE=on go mod tidy
 
 build:
-	GO111MODULE=on go build -v -ldflags "-X github.com/smith-30/ootd/cmd.version=$(VERSION) -X github.com/smith-30/ootd/cmd.revision=$(REVISION) -X github.com/smith-30/ootd/cmd.appName=$(NAME)" -o build/${GOOS}_${GOARCH}/${NAME} main.go
+	GO111MODULE=on go build -v -ldflags "-X github.com/smith-30/nippo/cmd.version=$(VERSION) -X github.com/smith-30/nippo/cmd.revision=$(REVISION) -X github.com/smith-30/nippo/cmd.appName=$(NAME)" -o build/${GOOS}_${GOARCH}/${NAME} main.go
 
 install:
 	go install ./cmd/${CMD}

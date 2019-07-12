@@ -1,4 +1,4 @@
-module github.com/smith-30/ootd
+module github.com/smith-30/nippo
 
 go 1.12
 
